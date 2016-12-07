@@ -11,7 +11,7 @@ String vowels = "AEIOU";
 String article = "an";
 String theInsult = "";
 String databaseURL = null;
-String usernameL = null;
+String username = null;
 String password = null;
 
 try {
