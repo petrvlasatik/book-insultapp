@@ -10,7 +10,7 @@ public String generateInsult() {
 String vowels = "AEIOU";
 String article = "an";
 String theInsult = "";
-String databaseURL;
+String databaseURL = null;
 
 try {
     databaseURL = "jdbc:postgresql://";
