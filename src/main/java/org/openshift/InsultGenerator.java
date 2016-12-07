@@ -11,13 +11,15 @@ String vowels = "AEIOU";
 String article = "an";
 String theInsult = "";
 String databaseURL = null;
+String usernameL = null;
+String password = null;
 
 try {
     databaseURL = "jdbc:postgresql://";
     databaseURL += System.getenv("POSTGRESQL_SERVICE_HOST");
     databaseURL += "/" + System.getenv("POSTGRESQL_DATABASE");
-    String username = System.getenv("POSTGRESQL_USER");
-    String password = System.getenv("PGPASSWORD");
+    username = System.getenv("POSTGRESQL_USER");
+    password = System.getenv("PGPASSWORD");
     Connection connection = DriverManager.getConnection(databaseURL, username, password);
 
     if (connection != null) {
@@ -35,7 +37,7 @@ try {
         connection.close();
     }
 } catch (Exception e) {
-    return "Database connection problem!" + databaseURL;
+    return "Database connection problem! : " + databaseURL + " : " + username + " : " + password;
 }
     return theInsult;
 }
