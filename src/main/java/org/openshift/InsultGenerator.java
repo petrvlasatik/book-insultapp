@@ -16,8 +16,7 @@ String password = null;
 
 try {
     databaseURL = "jdbc:postgresql://";
-/*    databaseURL += System.getenv("POSTGRESQL_SERVICE_HOST"); */
-    databaseURL += "172.17.0.16";
+    databaseURL += System.getenv("POSTGRESQL_SERVICE_HOST");
     databaseURL += "/" + System.getenv("POSTGRESQL_DATABASE");
     username = System.getenv("POSTGRESQL_USER");
     password = System.getenv("PGPASSWORD");
