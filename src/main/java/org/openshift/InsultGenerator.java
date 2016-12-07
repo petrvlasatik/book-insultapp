@@ -34,7 +34,7 @@ try {
         connection.close();
     }
 } catch (Exception e) {
-    return "Database connection problem!";
+    return "Database connection problem!" + databaseURL;
 }
     return theInsult;
 }
