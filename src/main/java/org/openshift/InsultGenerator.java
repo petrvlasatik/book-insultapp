@@ -10,9 +10,10 @@ public String generateInsult() {
 String vowels = "AEIOU";
 String article = "an";
 String theInsult = "";
+String databaseURL;
 
 try {
-    String databaseURL = "jdbc:postgresql://";
+    databaseURL = "jdbc:postgresql://";
     databaseURL += System.getenv("POSTGRESQL_SERVICE_HOST");
     databaseURL += "/" + System.getenv("POSTGRESQL_DATABASE");
     String username = System.getenv("POSTGRESQL_USER");
